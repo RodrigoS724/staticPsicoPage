@@ -6,36 +6,52 @@
 <title>Lic. Erika Ducamps | Psicología Infantil y Adolescente</title>
 
 <style>
-/* ========= BASE ========= */
+/* ======================
+   ESTILO GENERAL
+====================== */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family: "Segoe UI", system-ui, sans-serif;
 }
 
 body{
-  background:#f6f7f9;
-  color:#333;
+  background:#f8fafc;
+  color:#374151;
   line-height:1.6;
 }
 
 section{
-  max-width:1000px;
+  max-width:1050px;
   margin:auto;
-  padding:80px 20px;
+  padding:90px 22px;
 }
 
 h1,h2,h3{
   font-weight:600;
 }
 
-h1{font-size:2.6rem;}
-h2{font-size:1.8rem; text-align:center; margin-bottom:40px;}
+h1{font-size:2.7rem;}
+h2{font-size:1.9rem; text-align:center; margin-bottom:45px;}
 
-p{color:#555; margin-bottom:12px}
+p{
+  color:#555;
+  margin-bottom:12px;
+}
 
-/* ========= HERO ========= */
+/* ======================
+   COLORES SUAVES
+====================== */
+:root{
+  --primary:#7c83fd;
+  --soft:#eef2ff;
+  --card:#ffffff;
+}
+
+/* ======================
+   HERO
+====================== */
 .hero{
   text-align:center;
   padding-top:120px;
@@ -46,32 +62,40 @@ p{color:#555; margin-bottom:12px}
   height:160px;
   border-radius:50%;
   object-fit:cover;
-  margin-bottom:20px;
+  margin-bottom:22px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
+/* ======================
+   BOTONES
+====================== */
 .btn{
   display:inline-block;
   margin:8px;
-  padding:12px 25px;
-  border-radius:25px;
+  padding:12px 26px;
+  border-radius:30px;
   text-decoration:none;
   font-size:.95rem;
   transition:.2s;
 }
 
 .btn-primary{
-  background:#4f46e5;
+  background:var(--primary);
   color:white;
 }
 
 .btn-outline{
-  border:1px solid #4f46e5;
-  color:#4f46e5;
+  border:2px solid var(--primary);
+  color:var(--primary);
 }
 
-.btn:hover{opacity:.9}
+.btn:hover{
+  transform:translateY(-2px);
+}
 
-/* ========= CARDS ========= */
+/* ======================
+   CARDS
+====================== */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -79,80 +103,91 @@ p{color:#555; margin-bottom:12px}
 }
 
 .card{
-  background:white;
-  padding:25px;
-  border-radius:14px;
-  box-shadow:0 4px 18px rgba(0,0,0,.05);
+  background:var(--card);
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
 }
 
-/* ========= GALERÍA ========= */
+/* ======================
+   GALERÍA
+====================== */
 .gallery{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:15px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
 }
 
 .gallery img{
   width:100%;
-  height:200px;
+  height:210px;
   object-fit:cover;
-  border-radius:12px;
+  border-radius:16px;
 }
 
-/* ========= FORM ========= */
+/* ======================
+   FORMULARIO
+====================== */
 form{
-  max-width:500px;
+  max-width:520px;
   margin:auto;
   display:flex;
   flex-direction:column;
-  gap:15px;
+  gap:14px;
 }
 
 input, textarea{
-  padding:12px;
-  border-radius:8px;
+  padding:13px;
+  border-radius:10px;
   border:1px solid #ddd;
   font-size:14px;
 }
 
 textarea{
-  resize:none;
   height:120px;
+  resize:none;
 }
 
-/* ========= FOOTER ========= */
+/* ======================
+   FOOTER
+====================== */
 footer{
   background:white;
-  text-align:center;
   padding:40px 20px;
+  text-align:center;
   font-size:.85rem;
-  color:#777;
+  color:#6b7280;
   margin-top:40px;
+  border-top:1px solid #eee;
 }
 
-/* ========= WHATSAPP FLOAT ========= */
+/* ======================
+   WHATSAPP FLOAT
+====================== */
 .whatsapp{
   position:fixed;
   bottom:20px;
   right:20px;
   background:#25d366;
   color:white;
-  width:60px;
-  height:60px;
+  width:62px;
+  height:62px;
   border-radius:50%;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:28px;
+  font-size:30px;
   text-decoration:none;
-  box-shadow:0 6px 18px rgba(0,0,0,.2);
+  box-shadow:0 6px 20px rgba(0,0,0,.25);
 }
 
-/* ========= ANIMACIÓN ========= */
+/* ======================
+   ANIMACIÓN
+====================== */
 .fade{
   opacity:0;
-  transform:translateY(30px);
-  transition:.6s;
+  transform:translateY(25px);
+  transition:.7s;
 }
 
 .fade.show{
@@ -166,13 +201,14 @@ footer{
 
 <!-- HERO -->
 <section class="hero fade">
-  <img src="logo_perfil.jpg" alt="Foto profesional">
+
+  <img src="foto-perfil.jpg" alt="Foto profesional">
 
   <h1>Lic. Erika Ducamps</h1>
 
   <p>
-    Psicóloga especializada en atención a niños y adolescentes.  
-    Brindo un espacio cálido, seguro y profesional para acompañar el desarrollo emocional de cada familia.
+    Psicóloga especializada en acompañamiento emocional de niños y adolescentes.  
+    Un espacio cálido, respetuoso y profesional para crecer, comprender y sanar.
   </p>
 
   <a class="btn btn-primary" href="#contacto">Solicitar consulta</a>
@@ -187,35 +223,43 @@ footer{
 <!-- SERVICIOS -->
 <section class="fade">
   <h2>Servicios</h2>
-  <div class="grid">
 
+  <div class="grid">
     <div class="card">
       <h3>👧 Psicología Infantil</h3>
-      <p>Juego terapéutico, emociones, conducta, aprendizaje y acompañamiento escolar.</p>
+      <p>Trabajo emocional, juego terapéutico, conducta y aprendizaje.</p>
     </div>
 
     <div class="card">
       <h3>🧑 Adolescencia</h3>
-      <p>Ansiedad, autoestima, vínculos, orientación vocacional y procesos de cambio.</p>
+      <p>Ansiedad, autoestima, vínculos, orientación y acompañamiento.</p>
     </div>
 
     <div class="card">
-      <h3>👨‍👩‍👧 Orientación a Familias</h3>
-      <p>Herramientas y guía para madres, padres y cuidadores.</p>
+      <h3>👨‍👩‍👧 Orientación Familiar</h3>
+      <p>Apoyo y herramientas para madres, padres y cuidadores.</p>
     </div>
-
   </div>
+</section>
+
+<!-- MODALIDAD -->
+<section class="fade">
+  <h2>Modalidad de atención</h2>
+  <p style="text-align:center;max-width:700px;margin:auto">
+    Atención con turnos coordinados previamente.  
+    Consultas y reservas por teléfono o WhatsApp.
+  </p>
 </section>
 
 <!-- SOBRE -->
 <section class="fade">
   <h2>Sobre mí</h2>
   <p>
-    Mi vocación es acompañar el crecimiento emocional de niños y adolescentes,
-    ofreciendo un espacio de escucha, respeto y confianza.
+    Mi vocación es acompañar el desarrollo emocional de niños y adolescentes,
+    generando un espacio de confianza donde puedan expresarse libremente.
   </p>
   <p>
-    Cada proceso es único, por eso trabajo desde un enfoque personalizado y humano.
+    Cada proceso es único y personalizado, priorizando la escucha, el respeto y el bienestar integral.
   </p>
 </section>
 
@@ -241,23 +285,23 @@ footer{
   </form>
 
   <p style="text-align:center;margin-top:20px">
-    O escribime directamente por WhatsApp
+    También podés comunicarte directamente por WhatsApp 📲
   </p>
 </section>
 
 <footer>
   © 2026 Erika Ducamps – Atención psicológica infantil y adolescente<br>
-  Imágenes propias · Diseño minimalista · Licencia MIT<br>
-  Powered By <strong>Rodrigo Sayas</strong>
+  Contenido e imágenes propiedad de la profesional · Licencia MIT<br>
+  Sitio creado con ❤️ por <strong>Rodrigo Sayas</strong>
 </footer>
 
-<!-- BOTÓN WHATSAPP -->
-<a class="whatsapp" 
-   href="https://wa.me/59897533880" 
+<!-- WHATSAPP -->
+<a class="whatsapp"
+   href="https://wa.me/59800000000"
    target="_blank">💬</a>
 
 <script>
-/* Fade on scroll */
+/* Animaciones */
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting) e.target.classList.add("show")
@@ -265,8 +309,7 @@ const observer = new IntersectionObserver(entries=>{
 })
 document.querySelectorAll(".fade").forEach(el=>observer.observe(el))
 
-
-/* Formulario -> abre mail automáticamente */
+/* Formulario -> mail */
 document.getElementById("form").addEventListener("submit", e=>{
   e.preventDefault()
 
@@ -280,7 +323,7 @@ Email: ${email}
 Mensaje: ${msg}`
 
   window.location.href =
-    `mailto:TUEMAIL@MAIL.COM?subject=Consulta desde la web&body=${encodeURIComponent(body)}`
+    `mailto:MAIL@MAIL.COM?subject=Consulta desde la web&body=${encodeURIComponent(body)}`
 })
 </script>
 
